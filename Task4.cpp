@@ -1,3 +1,8 @@
+// Danyal Asfar
+// 552124
+// section D
+// BS-CS-15D
+
 #include <iostream>
 using namespace std;
 
@@ -76,7 +81,7 @@ class List{
             newNode -> data = addData;
             newNode -> next = head;
 
-            if (head == nullptr)
+            if (head == nullptr) // if list is empty, then tail should also point to new node
                 tail = newNode;
             head = newNode;
         }

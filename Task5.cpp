@@ -1,3 +1,8 @@
+// Danyal Asfar
+// 552124
+// section D
+// BS-CS-15D
+
 #include <iostream>
 using namespace std;
 
@@ -74,7 +79,7 @@ class List{
             node* prevNode;
 
             currentNode = head;
-            prevNode = nullptr;
+            prevNode = nullptr; // nullptr exists before head
 
             while (currentNode != nullptr && currentNode -> data != delData){
                 prevNode = currentNode;
@@ -85,10 +90,10 @@ class List{
                 cout << "\nValue not in Linked List!!!";
             else{
 
-                if (tail == currentNode)
-                        tail = prevNode;
-                if (head == currentNode)
-                    head = currentNode -> next;
+                if (tail == currentNode) // data is at end of the list
+                        tail = prevNode; // tail updated to previous node
+                if (head == currentNode) // data is at beginning of the list
+                    head = currentNode -> next; // head updated to next node
                 else{
                     prevNode -> next = currentNode -> next;
                 }
@@ -126,6 +131,7 @@ int main(){
     cout << "Linked List:\n";
     linkedList.PrintList();
 
+    linkedList.ClearList();
 
     return 0;
 }
